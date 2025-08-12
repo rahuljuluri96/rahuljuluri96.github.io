@@ -20,11 +20,16 @@
             font-family: 'Roboto Mono', monospace;
         }
         .section {
-            padding: 8rem 1.5rem;
+            padding: 4rem 1.5rem;
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
+        }
+        @media (min-width: 768px) {
+            .section {
+                padding: 8rem 1.5rem;
+            }
         }
         .card {
             background: #f8fafc; /* slate-50 */
@@ -77,20 +82,20 @@
 </head>
 <body>
 
-    <!-- Header -->
     <header class="bg-white/80 backdrop-blur-sm fixed top-0 left-0 right-0 z-50 transition-all duration-300 header-shadow">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 <div class="flex-shrink-0">
-                    <a href="#" class="text-4xl font-bold font-mono accent-red">My Portfolio</a>
+                    <a href="#" class="text-3xl md:text-4xl font-bold text-slate-500">My Portfolio</a>
                 </div>
                 <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-6 font-mono text-lg">
-                        <a href="#about" class="text-slate-600 hover:accent-red">/about</a>
-                        <a href="#experience" class="text-slate-600 hover:accent-red">/experience</a>
-                        <a href="#achievements" class="text-slate-600 hover:accent-red">/achievements</a>
-                        <a href="#projects" class="text-slate-600 hover:accent-red">/projects</a>
-                        <a href="#contact" class="text-slate-600 hover:accent-red">/contact</a>
+                    <div class="ml-10 flex items-baseline space-x-6 font-sans text-lg">
+                        <a href="#about" class="text-slate-600 hover:text-red-500 hover:font-bold transition-colors duration-300 ease-in-out">about</a>
+                        <a href="#experience" class="text-slate-600 hover:text-red-500 hover:font-bold transition-colors duration-300 ease-in-out">experience</a>
+                        <a href="#achievements" class="text-slate-600 hover:text-red-500 hover:font-bold transition-colors duration-300 ease-in-out">achievements</a>
+                        <a href="#projects" class="text-slate-600 hover:text-red-500 hover:font-bold transition-colors duration-300 ease-in-out">projects</a>
+                        <a href="#certifications" class="text-slate-600 hover:text-red-500 hover:font-bold transition-colors duration-300 ease-in-out">certifications</a>
+                        <a href="#contact" class="text-slate-600 hover:text-red-500 hover:font-bold transition-colors duration-300 ease-in-out">contact</a>
                     </div>
                 </div>
             </div>
@@ -98,150 +103,184 @@
     </header>
 
     <main>
-        <!-- About Section -->
         <section id="about" class="section fade-in-section">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex flex-col-reverse md:flex-row items-center justify-center gap-10 md:gap-20">
                     <div class="md:w-3/5 text-center md:text-left">
-                        <p class="accent-red font-mono text-3xl">Hi, my name is</p>
-                        <h1 class="text-6xl md:text-8xl font-bold text-slate-900 mt-2">Juluri Rahul.</h1>
-                        <h2 class="text-4xl md:text-6xl font-bold text-slate-500 mt-2">I build things with <span id="typed-text" class="accent-blue"></span></h2>
-                        <p class="mt-8 text-xl text-slate-900 max-w-2xl mx-auto md:mx-0">
+                        <p class="text-slate-600 font-bold font-sans text-xl md:text-3xl">Hi, my name is</p>
+                        <h1 class="text-5xl md:text-8xl font-bold text-slate-900 mt-2">Juluri Rahul.</h1>
+                        <h2 class="text-3xl md:text-6xl font-bold text-slate-500 mt-2">I build things with <span id="typed-text" class="accent-blue"></span></h2>
+                        <p class="mt-8 text-lg md:text-xl text-slate-900 max-w-2xl mx-auto md:mx-0">
                             A passionate AI and Machine Learning enthusiast with a strong foundation in software development and problem-solving. Eager to tackle new challenges and bring creative, technical solutions to a dynamic team.
                         </p>
                     </div>
                     <div class="md:w-1/2 flex justify-center md:justify-end">
-                <div class="w-full max-w-lg h-[500px] rounded-[3rem]" 
-                     style="
-                        background-image: url('https://iili.io/FLhFxoP.jpg');
-                        background-size: 110%; /* Your requested 10% zoom */
-                        background-position: center 30%; /* Positions your upper body */
-                        -webkit-mask-image: radial-gradient(ellipse, black 75%, transparent 100%);
-                        mask-image: radial-gradient(ellipse, black 75%, transparent 100%);
-                     ">
-                </div>
-            </div>
+                        <div class="w-full max-w-sm md:max-w-lg h-[350px] md:h-[500px] rounded-[3rem]" 
+                             style="
+                                 background-image: url('https://iili.io/FLhFxoP.jpg');
+                                 background-size: 110%;
+                                 background-position: center 30%;
+                                 -webkit-mask-image: radial-gradient(ellipse, black 75%, transparent 100%);
+                                 mask-image: radial-gradient(ellipse, black 75%, transparent 100%);
+                             ">
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Experience Section -->
         <section id="experience" class="section fade-in-section bg-slate-50">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-5xl font-bold text-slate-900 text-center mb-16">Exper<span class="accent-blue">ience</span></h2>
+                <h2 class="text-4xl md:text-5xl font-bold text-slate-900 text-center mb-16">Exper<span class="accent-blue">ience</span></h2>
                 <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-10">
                     <div class="card p-8 rounded-xl">
-                        <p class="text-2xl font-semimono accent-blue">AICTE-Eduskills</p>
-                        <h3 class="text-3xl font-semibold text-slate-800 mt-2">Google AIML Virtual Internship</h3>
-                        <p class="mt-4 text-lg text-slate-600">Gained practical insights into industry-level AI and Machine Learning applications, focusing on real-world problem-solving and development workflows.</p>
+                        <p class="text-xl md:text-2xl font-mono accent-blue">AICTE-Eduskills</p>
+                        <h3 class="text-2xl md:text-3xl font-semibold text-slate-800 mt-2">Google AIML Virtual Internship</h3>
+                        <p class="mt-4 text-base md:text-lg text-slate-600">Gained practical insights into industry-level AI and Machine Learning applications, focusing on real-world problem-solving and development workflows.</p>
                     </div>
                     <div class="card p-8 rounded-xl">
-                        <p class="text-2xl font-semimono accent-blue">Hackathon</p>
-                        <h3 class="text-3xl font-semibold text-slate-800 mt-2">Smart India Hackathon</h3>
-                        <p class="mt-4 text-lg text-slate-600">As a core team member, developed a solution for real-time Indian Sign Language to text/speech translation using advanced AI and ML models.</p>
+                        <p class="text-xl md:text-2xl font-mono accent-blue">Hackathon</p>
+                        <h3 class="text-2xl md:text-3xl font-semibold text-slate-800 mt-2">Smart India Hackathon</h3>
+                        <p class="mt-4 text-base md:text-lg text-slate-600">As a core team member, developed a solution for real-time Indian Sign Language to text/speech translation using advanced AI and ML models.</p>
                     </div>
                 </div>
             </div>
         </section>
         
-        <!-- Technical Proficiency Section -->
         <section id="proficiency" class="section fade-in-section">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-5xl font-bold text-slate-900 text-center mb-16">Technical <span class="accent-red">Proficiency</span></h2>
+                <h2 class="text-4xl md:text-5xl font-bold text-slate-900 text-center mb-16">Technical <span class="accent-red">Proficiency</span></h2>
                 <div class="max-w-7xl mx-auto flex flex-wrap gap-4 justify-center">
-                    <span class="skill-tag text-lg font-semibold px-10 py-9 rounded-lg">Python</span>
-                    <span class="skill-tag text-lg font-semibold px-10 py-9 rounded-lg">Java</span>
-                    <span class="skill-tag text-lg font-semibold px-10 py-9 rounded-lg">Machine Learning</span>
-                    <span class="skill-tag text-lg font-semibold px-10 py-9 rounded-lg">Deep Learning</span>
-                    <span class="skill-tag text-lg font-semibold px-10 py-9 rounded-lg">Data Structures</span>
-                    <span class="skill-tag text-lg font-semibold px-10 py-9 rounded-lg">Web Development</span>
-                    <span class="skill-tag text-lg font-semibold px-10 py-9 rounded-lg">SQL</span>
-                    <span class="skill-tag text-lg font-semibold px-10 py-9 rounded-lg">Flask</span>
-                    <span class="skill-tag text-lg font-semibold px-10 py-9 rounded-lg">PyTorch</span>
-                    <span class="skill-tag text-lg font-semibold px-10 py-9 rounded-lg">Tableau</span>
-                    <span class="skill-tag text-lg font-semibold px-10 py-8 rounded-lg">PowerBI</span>
+                    <span class="skill-tag text-base md:text-lg font-semibold px-6 py-4 md:px-10 md:py-9 rounded-lg">Python</span>
+                    <span class="skill-tag text-base md:text-lg font-semibold px-6 py-4 md:px-10 md:py-9 rounded-lg">Java</span>
+                    <span class="skill-tag text-base md:text-lg font-semibold px-6 py-4 md:px-10 md:py-9 rounded-lg">Machine Learning</span>
+                    <span class="skill-tag text-base md:text-lg font-semibold px-6 py-4 md:px-10 md:py-9 rounded-lg">Deep Learning</span>
+                    <span class="skill-tag text-base md:text-lg font-semibold px-6 py-4 md:px-10 md:py-9 rounded-lg">Data Structures</span>
+                    <span class="skill-tag text-base md:text-lg font-semibold px-6 py-4 md:px-10 md:py-9 rounded-lg">Web Development</span>
+                    <span class="skill-tag text-base md:text-lg font-semibold px-6 py-4 md:px-10 md:py-9 rounded-lg">SQL</span>
+                    <span class="skill-tag text-base md:text-lg font-semibold px-6 py-4 md:px-10 md:py-9 rounded-lg">Flask</span>
+                    <span class="skill-tag text-base md:text-lg font-semibold px-6 py-4 md:px-10 md:py-9 rounded-lg">PyTorch</span>
+                    <span class="skill-tag text-base md:text-lg font-semibold px-6 py-4 md:px-10 md:py-9 rounded-lg">Tableau</span>
+                    <span class="skill-tag text-base md:text-lg font-semibold px-6 py-4 md:px-10 md:py-8 rounded-lg">PowerBI</span>
                 </div>
             </div>
         </section>
 
-        <!-- Achievements Section -->
         <section id="achievements" class="section fade-in-section bg-slate-50">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-5xl font-bold text-slate-900 text-center mb-16">Key <span class="accent-blue">Achievements</span></h2>
+                <h2 class="text-4xl md:text-5xl font-bold text-slate-900 text-center mb-16">Key <span class="accent-blue">Achievements</span></h2>
                 <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-10">
                     <div class="card p-8 rounded-xl text-center hover:border-blue-500">
-                        <i class="fas fa-trophy fa-3x accent-blue"></i>
-                        <h3 class="text-3xl font-semibold text-slate-800 mt-4">Gold Prize - Ideathon</h3>
-                        <p class="text-lg text-slate-800 mt-2">Won 1st place and a ₹10,000 cash prize at the Ideathon conducted by ASCEND, Sreenidhi Institute of Science and Technology.</p>
+                        <i class="fas fa-trophy fa-2x md:fa-3x accent-blue"></i>
+                        <h3 class="text-2xl md:text-3xl font-semibold text-slate-800 mt-4">Gold Prize - Ideathon</h3>
+                        <p class="text-base md:text-lg text-slate-800 mt-2">Won 1st place and a ₹10,000 cash prize at the Ideathon conducted by ASCEND, Sreenidhi Institute of Science and Technology.</p>
                     </div>
                     <div class="card p-8 rounded-xl text-center hover:border-blue-500">
-                        <i class="fas fa-award fa-3x accent-blue"></i>
-                        <h3 class="text-3xl font-semibold text-slate-800 mt-4">3rd Prize - Nexovate</h3>
-                        <p class="text-lg text-slate-800 mt-2">Secured 3rd place and a ₹10,000 cash prize at Nexovate, a National Level Hackathon conducted by Geethanjali Engineering College.</p>
+                        <i class="fas fa-award fa-2x md:fa-3x accent-blue"></i>
+                        <h3 class="text-2xl md:text-3xl font-semibold text-slate-800 mt-4">3rd Prize - Nexovate</h3>
+                        <p class="text-base md:text-lg text-slate-800 mt-2">Secured 3rd place and a ₹10,000 cash prize at Nexovate, a National Level Hackathon conducted by Geethanjali Engineering College.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Projects Section -->
         <section id="projects" class="section fade-in-section">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-5xl font-bold text-slate-900 text-center mb-16">My <span class="accent-red">Projects</span></h2>
+                <h2 class="text-4xl md:text-5xl font-bold text-slate-900 text-center mb-16">My <span class="accent-red">Projects</span></h2>
                 <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
                     <div class="card p-8 rounded-xl">
-                        <h3 class="font-bold text-2xl mb-2 accent-red">Sign Bridge</h3>
-                        <p class="text-lg text-slate-600">An assistive tool using ML and Computer Vision to recognize and translate sign language gestures to text and speech.</p>
+                        <h3 class="font-bold text-xl md:text-2xl mb-2 accent-red">Sign Bridge</h3>
+                        <p class="text-base md:text-lg text-slate-600">An assistive tool using ML and Computer Vision to recognize and translate sign language gestures to text and speech.</p>
                     </div>
                     <div class="card p-8 rounded-xl">
-                        <h3 class="font-bold text-2xl mb-2 accent-red">Ayur Bot - Chat Bot</h3>
-                        <p class="text-lg text-slate-600">An AI-powered chatbot offering personalized Ayurvedic health advice by employing NLP to understand user queries.</p>
+                        <h3 class="font-bold text-xl md:text-2xl mb-2 accent-red">Ayur Bot - Chat Bot</h3>
+                        <p class="text-base md:text-lg text-slate-600">An AI-powered chatbot offering personalized Ayurvedic health advice by employing NLP to understand user queries.</p>
                     </div>
                     <div class="card p-8 rounded-xl">
-                        <h3 class="font-bold text-2xl mb-2 accent-red">Movie Recommender</h3>
-                        <p class="text-lg text-slate-600">A recommendation engine using Collaborative Filtering and the MovieLens dataset to suggest movies to users.</p>
+                        <h3 class="font-bold text-xl md:text-2xl mb-2 accent-red">Movie Recommender</h3>
+                        <p class="text-base md:text-lg text-slate-600">A recommendation engine using Collaborative Filtering and the MovieLens dataset to suggest movies to users.</p>
                     </div>
                     <div class="card p-8 rounded-xl">
-                        <h3 class="font-bold text-2xl mb-2 accent-red">Artwork Restoration</h3>
-                        <p class="text-lg text-slate-600">A web app using Deep Learning (U-Net) to digitally restore damaged artworks by intelligently filling in irregular holes.</p>
+                        <h3 class="font-bold text-xl md:text-2xl mb-2 accent-red">Artwork Restoration</h3>
+                        <p class="text-base md:text-lg text-slate-600">A web app using Deep Learning (U-Net) to digitally restore damaged artworks by intelligently filling in irregular holes.</p>
                     </div>
                      <div class="card p-8 rounded-xl">
-                        <h3 class="font-bold text-2xl mb-2 accent-red">CGPA Calculator</h3>
-                        <p class="text-lg text-slate-600">Utilizes ML models to predict student CGPA, aiding in academic planning. Trained on historical data for accurate predictions.</p>
+                        <h3 class="font-bold text-xl md:text-2xl mb-2 accent-red">CGPA Calculator</h3>
+                        <p class="text-base md:text-lg text-slate-600">Utilizes ML models to predict student CGPA, aiding in academic planning. Trained on historical data for accurate predictions.</p>
                     </div>
                      <div class="card p-8 rounded-xl">
-                        <h3 class="font-bold text-2xl mb-2 accent-red">Weather Website</h3>
-                        <p class="text-lg text-slate-600">Provides instant access to accurate, up-to-date weather data for any location worldwide.</p>
+                        <h3 class="font-bold text-xl md:text-2xl mb-2 accent-red">Weather Website</h3>
+                        <p class="text-base md:text-lg text-slate-600">Provides instant access to accurate, up-to-date weather data for any location worldwide.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="section fade-in-section bg-slate-800">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl">
-                <h2 class="font-mono text-2xl accent-red">What's Next?</h2>
-                <h3 class="text-6xl font-bold text-white mt-4">Get In Touch</h3>
-                <p class="mt-8 text-2xl text-slate-400">
-                    My inbox is always open. Whether you have an opportunity, a question, or just want to connect, I'll do my best to get back to you!
-                </p>
-                <div class="mt-12">
-                    <a href="https://www.linkedin.com/in/rahul-juluri" class="btn-primary text-2xl">
-                        Say hello on LinkedIn! 
-                    </a>
+        <section id="certifications" class="section fade-in-section bg-slate-50">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl md:text-5xl font-bold text-slate-900 text-center mb-16">Certifi<span class="accent-blue">cations</span></h2>
+                <div class="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="card p-6 rounded-xl flex items-center gap-4 hover:border-blue-500">
+                        <i class="fas fa-award fa-2x accent-blue"></i>
+                        <span class="text-slate-800 font-semibold text-lg">Sql Advanced</span>
+                    </div>
+                    <div class="card p-6 rounded-xl flex items-center gap-4 hover:border-blue-500">
+                        <i class="fas fa-award fa-2x accent-blue"></i>
+                        <span class="text-slate-800 font-semibold text-lg">AI Tools Workshop</span>
+                    </div>
+                    <div class="card p-6 rounded-xl flex items-center gap-4 hover:border-blue-500">
+                        <i class="fas fa-award fa-2x accent-blue"></i>
+                        <span class="text-slate-800 font-semibold text-lg">Blockchain and Web3</span>
+                    </div>
+                    <div class="card p-6 rounded-xl flex items-center gap-4 hover:border-blue-500">
+                        <i class="fas fa-award fa-2x accent-blue"></i>
+                        <span class="text-slate-800 font-semibold text-lg">Introduction to Data Science</span>
+                    </div>
+                    <div class="card p-6 rounded-xl flex items-center gap-4 hover:border-blue-500">
+                        <i class="fas fa-award fa-2x accent-blue"></i>
+                        <span class="text-slate-800 font-semibold text-lg">AI Fundamentals with IBM</span>
+                    </div>
+                    <div class="card p-6 rounded-xl flex items-center gap-4 hover:border-blue-500">
+                        <i class="fas fa-award fa-2x accent-blue"></i>
+                        <span class="text-slate-800 font-semibold text-lg">Data Analytics Essentials</span>
+                    </div>
                 </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section fade-in-section bg-slate-800">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-left max-w-xl">
+                <h2 class="text-4xl md:text-5xl font-bold text-white text-center mb-12">Get In Touch</h2>
+                
+                <form action="https://formspree.io/f/YOUR_UNIQUE_ID" method="POST" class="space-y-6">
+                    <div>
+                        <label for="name" class="block mb-2 text-lg font-medium text-slate-300">Name</label>
+                        <input type="text" name="name" id="name" class="w-full bg-slate-700 text-white rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-red-500 transition" required>
+                    </div>
+                    <div>
+                        <label for="email" class="block mb-2 text-lg font-medium text-slate-300">Email</label>
+                        <input type="email" name="email" id="email" class="w-full bg-slate-700 text-white rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-red-500 transition" required>
+                    </div>
+                    <div>
+                        <label for="message" class="block mb-2 text-lg font-medium text-slate-300">Message</label>
+                        <textarea name="message" id="message" rows="5" class="w-full bg-slate-700 text-white rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-red-500 transition" required></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn-primary text-xl w-full md:w-auto">Send Message</button>
+                    </div>
+                </form>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="bg-white py-10">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-slate-500">
             <div class="flex justify-center space-x-8 mb-8">
-                <a href="https://github.com/rahuljuluri96" target="_blank" class="hover:text-red-500 transition-colors"><i class="fab fa-github fa-3x"></i></a>
-                <a href="https://www.linkedin.com/in/rahul-juluri/" target="_blank" class="hover:text-red-500 transition-colors"><i class="fab fa-linkedin fa-3x"></i></a>
+                <a href="https://github.com/rahuljuluri96" target="_blank" class="hover:text-red-500 transition-colors"><i class="fab fa-github fa-2x md:fa-3x"></i></a>
+                <a href="https://www.linkedin.com/in/rahul-juluri/" target="_blank" class="hover:text-red-500 transition-colors"><i class="fab fa-linkedin fa-2x md:fa-3x"></i></a>
             </div>
-            <p class="font-semimono text-lg">Designed & Built by Juluri Rahul</p>
-            <p class="font-semimono text-lg">Contact: +91 9014909394</p>
+            <p class="font-mono text-base md:text-lg">Designed & Built by Juluri Rahul</p>
+            <p class="font-mono text-base md:text-lg">Contact: +91 9014909394</p>
         </div>
     </footer>
     
@@ -269,6 +308,3 @@
     </script>
 </body>
 </html>
-
-
-
